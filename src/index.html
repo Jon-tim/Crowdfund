@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
 
-    <title>Frontend Mentor | Crowdfunding product page</title>
+    <title>Crowdfund</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -140,7 +140,8 @@
               </p>
 
               <p class="item-left">101<span>left</span></p>
-              <button>Select Reward</button>
+              <!-- <button>Select Reward</button> -->
+              <input type="button" value="Select Reward" />
             </aside>
             <aside class="mini-box-ui box-ui">
               <div>
@@ -154,7 +155,8 @@
               </p>
 
               <p class="item-left">64<span>left</span></p>
-              <button>Select Reward</button>
+              <!-- <button>Select Reward</button> -->
+              <input type="button" value="Select Reward" />
             </aside>
             <aside class="mini-box-ui box-ui out-of-stock">
               <div>
@@ -168,7 +170,7 @@
               </p>
 
               <p class="item-left">0<span>left</span></p>
-              <button>Out of Stock</button>
+              <input type="button" value="Out of Stock" disabled />
             </aside>
           </section>
         </section>
@@ -211,18 +213,29 @@
                     receive product updates via email.
                   </p>
                 </div>
+                <!-- Enter pledge -->
+                <div class="enter-pledge">
+                  <p>Enter your pledge</p>
+                  <div class="pledge-price">
+                    <div>
+                      <span>$</span>
+                      <input type="number" min="0" disabled />
+                    </div>
+                    <button>Continue</button>
+                  </div>
+                </div>
               </aside>
               <aside class="pledge-options">
-                <div class="mini-box-ui  backing-pledge">
+                <div class="mini-box-ui backing-pledge">
                   <div>
                     <input
                       type="radio"
-                      id="black-edition"
+                      id="bamboo-edition"
                       name="pledge-type"
                       value="Black Edition Stand"
                     />
                     <div>
-                      <label for="black-edition">Bamboo Stand</label>
+                      <label for="bamboo-edition">Bamboo Stand</label>
                       <p class="pledge-price">Pledge $25 or more</p>
                     </div>
                   </div>
@@ -240,7 +253,7 @@
                   <div class="pledge-price">
                     <div>
                       <span>$</span>
-                      <input type="text" />
+                      <input type="number" min="0" />
                     </div>
                     <button>Continue</button>
                   </div>
@@ -268,15 +281,27 @@
 
                   <p class="item-left">64<span>left</span></p>
                 </div>
+                <!-- Enter pledge -->
+                <div class="enter-pledge">
+                  <p>Enter your pledge</p>
+                  <div class="pledge-price">
+                    <div>
+                      <span>$</span>
+                      <input type="number" min="0" />
+                    </div>
+                    <button>Continue</button>
+                  </div>
+                </div>
               </aside>
               <aside class="pledge-options">
-                <div class="mini-box-ui box-ui backing-pledge">
+                <div class="mini-box-ui box-ui backing-pledge out-of-stock">
                   <div>
                     <input
                       type="radio"
                       id="mahogany-edition"
                       name="pledge-type"
                       value="Mahogany Special Edition"
+                      disabled
                     />
                     <div>
                       <label for="mahogany-edition"
