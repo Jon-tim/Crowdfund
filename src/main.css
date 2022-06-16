@@ -299,6 +299,7 @@ aside.pledge-options {
 .enter-pledge {
   padding: 1.5rem;
   width: 100%;
+  /* display: flex; */
   display: none;
   gap: 1.5rem;
   flex-direction: column;
@@ -454,7 +455,7 @@ input[type="button"]:disabled {
 /* BACK PROJECT MODAL */
 
 .back-project {
-  /* display: none; */
+  display: none;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
@@ -505,3 +506,34 @@ label {
 .pledge-box aside {
   position: relative;
 }
+
+/* THANK YOU MODAL */
+
+.thank-you-box {
+  padding: 1.5rem;
+  display: absolute;
+  top: 0;
+  z-index: 121;
+}
+
+.thank-you-content {
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+div.thank-you-content article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* .thank-you-content img {
+  margin-bottom: .5rem;
+} */
