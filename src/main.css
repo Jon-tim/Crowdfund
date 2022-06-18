@@ -466,15 +466,8 @@ input[type="button"]:disabled {
   z-index: 120;
 }
 
-/* .back-project-modal {
-  position: relative;
-  padding: 1.5rem 1.5rem;
-  top: 100px;
-  right: 0px;
-  left: 0px;
-} */
-
 .back-project-modal {
+  /* display: none; */
   margin-top: 7rem;
   padding: 1.5rem 1.5rem;
 }
@@ -515,10 +508,11 @@ label {
 /* THANK YOU MODAL */
 
 .thank-you-box {
+  display: none;
   padding: 1.5rem;
-/*   display: absolute; */
-  top: 0;
-  z-index: 121;
+  position: absolute;
+  top: 0px;
+  margin-top: 7.5rem;
 }
 
 .thank-you-content {
@@ -539,6 +533,6 @@ div.thank-you-content article {
   gap: 2rem;
 }
 
-/* .thank-you-content img {
-  margin-bottom: .5rem;
-} */
+.thank-you-content button {
+  padding: 0rem 2rem;
+}
