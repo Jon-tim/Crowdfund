@@ -466,12 +466,17 @@ input[type="button"]:disabled {
   z-index: 120;
 }
 
-.back-project-modal {
+/* .back-project-modal {
   position: relative;
   padding: 1.5rem 1.5rem;
   top: 100px;
   right: 0px;
   left: 0px;
+} */
+
+.back-project-modal {
+  margin-top: 7rem;
+  padding: 1.5rem 1.5rem;
 }
 
 .back-project-modal .modal {
@@ -511,7 +516,7 @@ label {
 
 .thank-you-box {
   padding: 1.5rem;
-  display: absolute;
+/*   display: absolute; */
   top: 0;
   z-index: 121;
 }
