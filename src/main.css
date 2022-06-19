@@ -466,7 +466,7 @@ input[type="button"]:disabled {
 /* BACK PROJECT MODAL */
 
 .back-project {
-  /* display: none; */
+  display: none;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
@@ -519,7 +519,7 @@ label {
 /* THANK YOU MODAL */
 
 .thank-you-box {
-  /* display: none; */
+  display: none;
   padding: 1.5rem;
   position: absolute;
   top: 0px;
@@ -588,7 +588,6 @@ div.thank-you-content article {
 }
 
 @media only screen and (min-width: 700px) {
- 
   .hero-image-mobile {
     display: none;
   }
@@ -606,8 +605,32 @@ div.thank-you-content article {
     max-width: 680px;
     margin: 0 auto;
   }
-   .thank-you-box {
+  .thank-you-box {
     margin-top: 22rem;
+  }
+
+  .stats .numb-stats {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .numb-stats hr {
+    height: 60px;
+    width: 1px;
+  }
+  .numb-stats article {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    gap: 0.2rem;
   }
 }
 
