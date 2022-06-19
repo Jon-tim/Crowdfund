@@ -184,6 +184,9 @@ button {
   font-size: 0.9rem;
   cursor: pointer;
 }
+button:hover {
+  background-color: var(--Dark-cyan);
+}
 .item-cta {
   display: flex;
   flex-direction: row;
@@ -204,8 +207,18 @@ button {
   font-size: 0.9rem;
 }
 
-.bookmark img {
-  border: 2px solid #fff;
+.bookmark-clicked {
+  color: var(--Moderate-cyan);
+}
+.g-circle {
+  fill: var(--Moderate-cyan);
+}
+
+.g-path {
+  fill: #fff;
+}
+
+.bookmark svg {
   border-radius: 50px;
 }
 .item-cta .bookmark span {
@@ -321,9 +334,7 @@ input[type="radio"]:checked {
   outline: 1px solid var(--Moderate-cyan);
   border: 5px solid #fff;
 }
-/* input[type="radio"]:checked ~ .enter-pledge {
-  border-top: 1px solid var(--Moderate-cyan);
-} */
+
 .pledge-price {
   width: 100%;
   display: flex;
@@ -438,6 +449,10 @@ input[type="button"] {
   cursor: pointer;
 }
 
+input[type="button"] {
+  background-color: var(--Dark-cyan);
+}
+
 input[type="button"]:disabled {
   background: #aaa7a79f;
 }
@@ -548,6 +563,21 @@ div.thank-you-content article {
   .box-ui {
     padding: 2.5rem 1.7rem;
   }
+
+  .about-project h3 {
+    font-size: 1.3rem;
+  }
+
+  .mini-box-ui div h6 {
+    font-size: 1rem;
+  }
+
+  .item-cta .bookmark span {
+    display: block;
+  }
+  .bookmark {
+    padding-right: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -555,8 +585,7 @@ div.thank-you-content article {
     display: none;
   }
 
-  .hero-image-desktop,
-  .item-cta .bookmark span {
+  .hero-image-desktop {
     display: block;
   }
 
