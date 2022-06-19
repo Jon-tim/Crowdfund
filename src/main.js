@@ -16,3 +16,6 @@ function scroller() {
 }
 
 window.addEventListener("scroll", scroller);
+
+
+//Bookmark status when active/clicked
