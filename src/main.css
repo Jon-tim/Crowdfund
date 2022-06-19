@@ -551,7 +551,7 @@ div.thank-you-content article {
   padding: 0rem 2rem;
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   .body-container {
     padding: 0rem 2rem;
     gap: 2rem;
@@ -578,21 +578,32 @@ div.thank-you-content article {
   .bookmark {
     padding-right: 1.5rem;
   }
+  .item h1 {
+    width: 500px;
+  }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 700px) {
   .hero-image-mobile {
     display: none;
   }
 
   .hero-image-desktop {
+    width: 100%;
     display: block;
   }
+}
 
+@media (min-width: 680px) {
   .body-container,
   .back-project-modal,
   .thank-you-box {
-    max-width: 768px;
+    max-width: 680px;
     margin: 0 auto;
   }
 }
+
+/* @media (min-width:992px){
+
+
+} */
