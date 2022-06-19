@@ -8,6 +8,7 @@ hamburgerMenu.addEventListener("click", () => {
     : (mobileMenu.style.display = "none");
 });
 
+
 //change header color on scroll to white
 function scroller() {
   window.scrollY >= nav.clientHeight

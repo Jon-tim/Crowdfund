@@ -226,6 +226,7 @@ button:hover {
 .bookmark svg {
   border-radius: 50px;
 }
+
 .item-cta .bookmark span {
   display: none;
 } /*remeber to set to none*/
