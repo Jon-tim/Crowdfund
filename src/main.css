@@ -36,11 +36,8 @@ header {
   position: relative;
 }
 
-.hero-image-mobile {
-  width: 100%;
-}
-
-nav {
+header section {
+  transition: background-color 5ms ease-in-out;
   width: 100%;
   height: 60px;
   position: fixed;
@@ -50,6 +47,14 @@ nav {
   z-index: 100;
   display: flex;
   align-items: center;
+}
+
+.hero-image-mobile {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
   transition: background-color 5ms ease-in-out;
 }
 
@@ -663,7 +668,9 @@ div.thank-you-content article {
     color: #fff;
   }
 }
-/* @media (min-width:992px){
-
-
-} */
+@media (min-width: 992px) {
+  nav {
+    max-width: 1165px;
+    margin: 0 auto;
+  }
+}

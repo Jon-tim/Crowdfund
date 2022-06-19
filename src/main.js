@@ -1,6 +1,6 @@
 const hamburgerMenu = document.querySelector(".bx");
 const mobileMenu = document.querySelector(".nav-btn");
-const nav = document.querySelector("nav");
+const nav = document.querySelector("header section");
 
 hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("bx-x")
@@ -16,6 +16,5 @@ function scroller() {
 }
 
 window.addEventListener("scroll", scroller);
-
 
 //Bookmark status when active/clicked
