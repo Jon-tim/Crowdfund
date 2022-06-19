@@ -466,7 +466,7 @@ input[type="button"]:disabled {
 /* BACK PROJECT MODAL */
 
 .back-project {
-  display: none;
+  /* display: none; */
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
@@ -478,7 +478,7 @@ input[type="button"]:disabled {
 }
 
 .back-project-modal {
-  /* display: none; */
+  display: none;
   margin-top: 7rem;
   padding: 1.5rem 1.5rem;
 }
@@ -519,7 +519,7 @@ label {
 /* THANK YOU MODAL */
 
 .thank-you-box {
-  display: none;
+  /* display: none; */
   padding: 1.5rem;
   position: absolute;
   top: 0px;
