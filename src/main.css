@@ -245,20 +245,17 @@ hr {
 }
 
 .progress-bar {
-  display: flex;
-  height: 15px;
-}
-#myProgress {
-  height: 15px;
   width: 100%;
-  background-color: grey;
+}
+progress {
+  width: 100%;
+  border: none;
+  border-radius: 50px;
 }
 
-#myBar {
-  height: 15px;
-  width: 1%;
-  height: 30px;
-  background-color: green;
+::-moz-progress-bar {
+  border-radius: 50px;
+  background-color: var(--Moderate-cyan);
 }
 
 section.about-project {
