@@ -126,7 +126,8 @@ nav div ul li a {
 main {
   position: relative;
 }
-section.body-container {
+
+.body-container {
   padding: 0rem 1.5rem;
   display: flex;
   align-items: center;
@@ -145,13 +146,11 @@ section.body-container {
   padding: 2.5rem 1.4rem;
 }
 
-section.item {
+.item {
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   text-align: center;
   gap: 0.8rem;
   padding: 3rem 1rem 2rem;
@@ -535,6 +534,20 @@ div.thank-you-content article {
 
 .thank-you-content button {
   padding: 0rem 2rem;
+}
+
+@media (min-width: 600px) {
+  .body-container {
+    padding: 0rem 2rem;
+    gap: 2rem;
+  }
+  .item {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .box-ui {
+    padding: 2.5rem 1.7rem;
+  }
 }
 
 @media (min-width: 768px) {
