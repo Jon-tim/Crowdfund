@@ -10,6 +10,9 @@
   --Moderate-cyan: hsl(176, 50%, 47%);
   --Dark-cyan: hsl(176, 72%, 28%);
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Commissioner", sans-serif;
@@ -504,6 +507,7 @@ input[type="button"]:disabled {
 }
 
 .back-project-modal {
+  width: 100%;
   position: fixed;
   top: 50%;
   left: 50%;
