@@ -336,8 +336,8 @@ aside.pledge-options {
 .enter-pledge {
   padding: 1.5rem;
   width: 100%;
-  display: flex;
-  /* display: none; */
+  /* display: flex; */
+  display: none;
   gap: 1.5rem;
   flex-direction: column;
   align-items: center;
@@ -665,8 +665,6 @@ div.thank-you-content article {
   }
 
   .enter-pledge {
-    display: flex;
-    /* display: none; */
     gap: 1.5rem;
     flex-direction: row;
     justify-content: space-between;
