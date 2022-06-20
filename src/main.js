@@ -33,3 +33,19 @@ function bookmarker() {
 
 //when bookmark is clicked:
 bookmark.addEventListener("click", bookmarker);
+
+// Button "back this project"
+const backProject = document.querySelector(".item-cta button");
+const backProjectModal = document.querySelector(".back-project");
+const backProjectContent = document.querySelector(".back-project-modal");
+const backProjectCloser = document.querySelector(".modal-content svg");
+
+function backProjectModalOpener() {
+  backProjectModal.style.display = "block";
+  backProjectContent.style.display = "block";
+}
+
+backProject.addEventListener("click", backProjectModalOpener);
+backProjectCloser.addEventListener("click", () => {
+  backProjectModal.style.display = "none";
+});

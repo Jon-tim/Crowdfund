@@ -504,6 +504,10 @@ input[type="button"]:disabled {
   justify-content: space-between;
 }
 
+.modal-content svg path:hover {
+  opacity: 1;
+}
+
 label {
   color: var(--Black);
   font-weight: 700;
