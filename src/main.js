@@ -61,6 +61,9 @@ selectRewardBtn.forEach(function (e) {
 
 //ENTER PLEDGE AMOUNTS/DONATION
 const radioBtns = document.querySelectorAll("input[type='radio']");
+const continuePledge = document.querySelectorAll(".pledge-price button");
+const thankYou = document.querySelector(".thank-you-box");
+const gotIt = document.querySelector(".thank-you-content button");
 // console.log(radioBtns);
 
 //functions
@@ -80,6 +83,17 @@ radioBtns.forEach(function (e) {
   // console.log(pledgeDisplay);
 });
 
-
 // THANK YOU MODAL
 
+continuePledge.forEach(function (e) {
+  e.addEventListener("click", () => {
+    thankYou.style.display = "block";
+    backProjectContent.style.display = "none";
+  });
+});
+
+gotIt.addEventListener("click", () => {
+  thankYou.style.display = "none";
+  backProjectModal.style.display = "none";
+  backProjectContent.style.display = "none";
+});

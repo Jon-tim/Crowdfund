@@ -570,12 +570,18 @@ label:hover {
 .thank-you-box {
   display: none;
   padding: 1.5rem;
-  position: absolute;
+  /* position: absolute;
   top: 0px;
   left: 0px;
-  right: 0px;
-  margin-top: 7.5rem;
+  right: 0px; */
+  /* margin-top: 7.5rem; */
+  height: 100%;
   width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
 }
 
 .thank-you-content {
