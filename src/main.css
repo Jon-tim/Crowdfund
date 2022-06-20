@@ -437,6 +437,11 @@ input[type="number"] {
 .out-of-stock {
   opacity: 0.5;
 }
+
+.out-of-stock label:hover {
+  color: var(--Black);
+}
+
 .out-of-stock.mini-box-ui div h6,
 .out-of-stock p {
   color: var(--Dark-gray);
@@ -513,7 +518,9 @@ label {
   font-weight: 700;
   font-size: 0.85rem;
 }
-
+label:hover {
+  color: var(--Moderate-cyan);
+}
 .backing-pledge > div {
   display: flex;
   gap: 1rem;
