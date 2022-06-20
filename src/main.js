@@ -49,3 +49,13 @@ backProject.addEventListener("click", backProjectModalOpener);
 backProjectCloser.addEventListener("click", () => {
   backProjectModal.style.display = "none";
 });
+
+// SELECT REWARD BUTTONS
+const selectRewardBtn = document.querySelectorAll(".item-left-box input");
+
+selectRewardBtn.forEach(function (e) {
+  e.addEventListener("click", () => {
+    backProjectContent.style.display = "block";
+    backProjectModal.style.display = "block";
+  });
+});
