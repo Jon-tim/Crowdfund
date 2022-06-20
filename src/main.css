@@ -118,6 +118,7 @@ nav div ul li a {
   color: var(--Black);
   text-transform: capitalize;
 }
+
 .menu-btn {
   display: flex;
   align-items: center;
@@ -201,6 +202,7 @@ button:hover {
   width: 100%;
 }
 .bookmark {
+  /* width: 190px; */
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -211,6 +213,7 @@ button:hover {
   color: var(--Dark-gray);
   font-size: 0.9rem;
   cursor: pointer;
+  transition: all .5s ease-in-out;
 }
 
 .bookmark-clicked {
@@ -699,6 +702,9 @@ div.thank-you-content article {
   nav div ul li a {
     padding-left: 0rem;
     color: #fff;
+  }
+  nav div ul li a:hover {
+    border-bottom: 1px solid #fff;
   }
 }
 @media (min-width: 992px) {
