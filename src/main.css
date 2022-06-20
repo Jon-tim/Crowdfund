@@ -336,8 +336,8 @@ aside.pledge-options {
 .enter-pledge {
   padding: 1.5rem;
   width: 100%;
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   gap: 1.5rem;
   flex-direction: column;
   align-items: center;
@@ -601,6 +601,23 @@ div.thank-you-content article {
   padding: 0rem 2rem;
 }
 
+@media (min-width: 500px) {
+  .pledge-price > div {
+    width: 100%;
+    height: 50px;
+    max-width: 180px;
+  }
+  .pledge-price {
+    width: unset;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .pledge-price button {
+    max-width: 180px;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .body-container {
     padding: 0rem 2rem;
@@ -646,6 +663,24 @@ div.thank-you-content article {
     gap: 0rem;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .enter-pledge {
+    display: flex;
+    /* display: none; */
+    gap: 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .pledge-price {
+    width: unset;
+    gap: 1.3rem;
+    justify-content: unset;
+  }
+
+  .enter-pledge > p {
+    max-width: max-content;
   }
 }
 
