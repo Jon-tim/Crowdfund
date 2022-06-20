@@ -44,7 +44,6 @@ function backProjectModalOpener() {
   backProjectModal.style.display = "block";
   backProjectContent.style.display = "block";
 }
-
 backProject.addEventListener("click", backProjectModalOpener);
 backProjectCloser.addEventListener("click", () => {
   backProjectModal.style.display = "none";
@@ -59,3 +58,28 @@ selectRewardBtn.forEach(function (e) {
     backProjectModal.style.display = "block";
   });
 });
+
+//ENTER PLEDGE AMOUNTS/DONATION
+const radioBtns = document.querySelectorAll("input[type='radio']");
+// console.log(radioBtns);
+
+//functions
+// function pledgeRevealer(e) {}
+
+radioBtns.forEach(function (e) {
+  let pledgeDisplay = e.parentElement.parentElement.nextElementSibling;
+  e.addEventListener("click", () => {
+    // e.checked = false;
+    if (e.checked) {
+      e.parentElement.parentElement.nextElementSibling.style.display = "flex";
+    } else {
+      e.parentElement.parentElement.nextElementSibling.style.display = "none";
+    }
+  });
+
+  // console.log(pledgeDisplay);
+});
+
+
+// THANK YOU MODAL
+
