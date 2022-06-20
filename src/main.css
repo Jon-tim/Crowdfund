@@ -305,18 +305,23 @@ aside.pledge-options {
   box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.4);
 }
 
+.item-left-box,
+.pledge-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.pledge-title {
+  gap: 0.5rem;
+}
+
 .mini-box-ui {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-}
-
-.pledge-title {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .enter-pledge {
@@ -404,17 +409,14 @@ input[type="number"] {
 }
 
 .pledge-title h6 {
+  /* width: 100%; */
   color: var(--Black);
-  margin-bottom: 0.6rem;
   font-weight: 900;
   font-size: 0.77rem;
 }
-/* .mini-box-ui div p:nth-child(1) {
-  color: var(--Black);
-  margin-bottom: 0.6rem;
-} */
 
 .pledge-title p {
+  /* width: 100%; */
   font-weight: 500;
   color: var(--Moderate-cyan);
   font-size: 0.85rem;
@@ -426,7 +428,6 @@ input[type="number"] {
 }
 
 .item-left {
-  margin: 1.4rem 0rem 1rem;
   font-size: 2rem;
   font-weight: 700;
   color: var(--Black);
@@ -611,11 +612,16 @@ div.thank-you-content article {
     margin-top: 15rem;
   }
 
+  .pledge-title h6 {
+    margin-bottom: 0rem;
+  }
+
+  .item-left-box,
   .pledge-title {
-    width: 100%;
     flex-direction: row;
-    align-items: center;
+    gap: 0rem;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
