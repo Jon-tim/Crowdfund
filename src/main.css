@@ -213,7 +213,10 @@ button:hover {
   color: var(--Dark-gray);
   font-size: 0.9rem;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5ms ease-in-out;
+}
+.bookmark:hover {
+  opacity: 0.8;
 }
 
 .bookmark-clicked {
