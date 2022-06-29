@@ -64,24 +64,30 @@ const radioBtns = document.querySelectorAll("input[type='radio']");
 const continuePledge = document.querySelectorAll(".pledge-price button");
 const thankYou = document.querySelector(".thank-you-box");
 const gotIt = document.querySelector(".thank-you-content button");
-// console.log(radioBtns);
 
-//functions
-// function pledgeRevealer(e) {}
+// const enterPledge = document.querySelectorAll(".enter-pledge");
 
-radioBtns.forEach(function (e) {
-  let pledgeDisplay = e.parentElement.parentElement.nextElementSibling;
-  e.addEventListener("click", () => {
-    // e.checked = false;
-    if (e.checked) {
-      e.parentElement.parentElement.nextElementSibling.style.display = "flex";
-    } else {
-      e.parentElement.parentElement.nextElementSibling.style.display = "none";
-    }
+const radioArray = Array.from(radioBtns);
+// console.log(radioArray);
+
+// console.log(radioArray[0].parentNode.parentElement.parentElement.lastElementChild)
+
+radioArray.forEach((element, index) => {
+  element.addEventListener("change", () => {
+    // enterPledge.classList.add("close-pledge");
+    radioArray.forEach((cur, i) => {
+      if (element.checked) {
+        element.parentNode.parentElement.parentElement.lastElementChild.classList.add(
+          "open-pledge"
+        );
+        cur.parentNode.parentElement.parentElement.lastElementChild.classList.remove(
+          "open-pledge"
+        );
+      }
+    });
   });
-
-  // console.log(pledgeDisplay);
 });
+//functions
 
 // THANK YOU MODAL
 
