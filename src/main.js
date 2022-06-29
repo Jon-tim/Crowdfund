@@ -2,6 +2,67 @@ const hamburgerMenu = document.querySelector(".bx");
 const mobileMenu = document.querySelector(".nav-btn");
 const nav = document.querySelector("header section");
 
+//*********************************************************
+
+const radioBtns = document.querySelectorAll("input[type='radio']");
+const continuePledge = document.querySelectorAll(".pledge-price button");
+const thankYou = document.querySelector(".thank-you-box");
+const gotIt = document.querySelector(".thank-you-content button");
+const radioArray = Array.from(radioBtns);
+const enterPledge = document.querySelectorAll(".enter-pledge");
+
+// console.log(enterPledge)
+// enterPledge.forEach((e) => (e.style.display = "none"));
+
+//*********************************************************
+
+const bookmark = document.querySelector(".bookmark");
+const bookmarkSvg = bookmark.firstElementChild.firstElementChild;
+
+//*********************************************************
+
+const backProject = document.querySelector(".item-cta button");
+const backProjectModal = document.querySelector(".back-project");
+const backProjectContent = document.querySelector(".back-project-modal");
+const backProjectCloser = document.querySelector(".modal-content svg");
+
+//*********************************************************
+
+// Button "back this project"
+function backProjectModalOpener() {
+  // radioArray.forEach(pledger);
+  // enterPledge.forEach((e) => (e.style.display = "none"));
+  backProjectModal.style.display = "block";
+  backProjectContent.style.display = "block";
+  backProjectCloser.addEventListener("click", () => {
+    backProjectModal.style.display = "none";
+    radioArray.forEach((e) => (e.checked = false));
+  });
+}
+backProject.addEventListener("click", backProjectModalOpener);
+// radioArray.forEach((e) => (e.checked = false));
+// enterPledge.forEach((e) => (e.style.display = "none"));
+
+//ENTER PLEDGE AMOUNTS/DONATION
+//function of pledge options
+function pledger(element, index) {
+  element.checked = false;
+  element.addEventListener("change", () => {
+    radioArray.forEach((cur, i) => {
+      if (element.checked) {
+        element.parentNode.parentElement.parentElement.lastElementChild.classList.add(
+          "open-pledge"
+        );
+        cur.parentNode.parentElement.parentElement.lastElementChild.classList.remove(
+          "open-pledge"
+        );
+      }
+    });
+  });
+}
+radioArray.forEach(pledger);
+
+//mobile Nav display
 hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("bx-x")
     ? (mobileMenu.style.display = "block")
@@ -14,14 +75,9 @@ function scroller() {
     ? nav.classList.add("nav-onscroll")
     : nav.classList.remove("nav-onscroll");
 }
-
 window.addEventListener("scroll", scroller);
 
 //Bookmark status when active/clicked
-
-const bookmark = document.querySelector(".bookmark");
-const bookmarkSvg = bookmark.firstElementChild.firstElementChild;
-
 function bookmarker() {
   bookmarkSvg.firstElementChild.classList.toggle("g-circle");
   bookmarkSvg.lastElementChild.classList.toggle("g-path");
@@ -30,24 +86,8 @@ function bookmarker() {
     ? (bookmark.querySelector("span").textContent = "Bookmarked")
     : (bookmark.querySelector("span").textContent = "Bookmark");
 }
-
 //when bookmark is clicked:
 bookmark.addEventListener("click", bookmarker);
-
-// Button "back this project"
-const backProject = document.querySelector(".item-cta button");
-const backProjectModal = document.querySelector(".back-project");
-const backProjectContent = document.querySelector(".back-project-modal");
-const backProjectCloser = document.querySelector(".modal-content svg");
-
-function backProjectModalOpener() {
-  backProjectModal.style.display = "block";
-  backProjectContent.style.display = "block";
-}
-backProject.addEventListener("click", backProjectModalOpener);
-backProjectCloser.addEventListener("click", () => {
-  backProjectModal.style.display = "none";
-});
 
 // SELECT REWARD BUTTONS
 const selectRewardBtn = document.querySelectorAll(".item-left-box input");
@@ -58,36 +98,6 @@ selectRewardBtn.forEach(function (e) {
     backProjectModal.style.display = "block";
   });
 });
-
-//ENTER PLEDGE AMOUNTS/DONATION
-const radioBtns = document.querySelectorAll("input[type='radio']");
-const continuePledge = document.querySelectorAll(".pledge-price button");
-const thankYou = document.querySelector(".thank-you-box");
-const gotIt = document.querySelector(".thank-you-content button");
-
-// const enterPledge = document.querySelectorAll(".enter-pledge");
-
-const radioArray = Array.from(radioBtns);
-// console.log(radioArray);
-
-// console.log(radioArray[0].parentNode.parentElement.parentElement.lastElementChild)
-
-radioArray.forEach((element, index) => {
-  element.addEventListener("change", () => {
-    // enterPledge.classList.add("close-pledge");
-    radioArray.forEach((cur, i) => {
-      if (element.checked) {
-        element.parentNode.parentElement.parentElement.lastElementChild.classList.add(
-          "open-pledge"
-        );
-        cur.parentNode.parentElement.parentElement.lastElementChild.classList.remove(
-          "open-pledge"
-        );
-      }
-    });
-  });
-});
-//functions
 
 // THANK YOU MODAL
 
@@ -102,4 +112,6 @@ gotIt.addEventListener("click", () => {
   thankYou.style.display = "none";
   backProjectModal.style.display = "none";
   backProjectContent.style.display = "none";
+  radioArray.forEach((e) => (e.checked = false));
+  // enterPledge.forEach((e) => (e.style.display = "none"));
 });
