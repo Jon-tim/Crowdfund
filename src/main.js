@@ -115,3 +115,18 @@ gotIt.addEventListener("click", () => {
   radioArray.forEach((e) => (e.checked = false));
   // enterPledge.forEach((e) => (e.style.display = "none"));
 });
+
+//********************************************************
+
+const pledgeAmount = document.querySelectorAll('input[type = "number"]');
+const currentAmount = document.querySelector(".current-amount"),
+  backers = document.querySelector(".backers"),
+  daysLeft = document.querySelector(".days-left");
+
+console.log(pledgeAmount);
+
+console.log(
+  currentAmount.textContent,
+  backers.textContent,
+  daysLeft.textContent
+);
